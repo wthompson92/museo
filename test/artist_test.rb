@@ -1,4 +1,3 @@
-require './lib/photograph'
 require './lib/artist'
 require 'minitest/autorun'
 require 'minitest/pride'
@@ -11,7 +10,7 @@ class ArtistTest < Minitest::Test
       died: "1984",
       country: "United States"  }
 
-    @photograph = Artist.new(attributes)
+    @artist = Artist.new(attributes)
   end
 
   def test_it_exists
@@ -40,5 +39,5 @@ class ArtistTest < Minitest::Test
     expected = "United States"
     actual = @artist.country
     assert_equal expected, actual
-
   end
+end
