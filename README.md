@@ -8,6 +8,7 @@
 * Push your solution to your fork
 * Submit a pull request from your repository to the turingschool-examples repository
   * Make sure to put your name in your PR!
+  * Please also indicate in the PR which iteration you fully completed.
 
 ### Iteration 1: Create Photograph Class
 
