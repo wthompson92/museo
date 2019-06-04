@@ -133,7 +133,6 @@ class CuratorTest < Minitest::Test
   end
 
   def test_it_can_find_photos_by_artsit
-    skip
     @curator.add_artist(@artist_1)
     @curator.add_artist(@artist_2)
     @curator.add_artist(@artist_3)
@@ -141,20 +140,13 @@ class CuratorTest < Minitest::Test
     @curator.add_photograph(@photo_2)
     @curator.add_photograph(@photo_3)
     diane_arbus = @curator.find_artist_by_id("3")
-   @curator.find_photographs_by_artist(diane_arbus)
+    @curator.find_photographs_by_artist(diane_arbus)
     expected = @photo_3[:name]
     actual = @curator.find_photographs_by_artist(diane_arbus)
     assert_equal expected, actual
-
-    expected = 1
-    actual = @curator.find_photographs_by_artist(diane_arbus).count
-    assert_instance_of expected, actual
-
-
   end
 
   def test_it_can_find_artists_with_multiple_photographs
-skip
     @curator.add_artist(@artist_1)
     @curator.add_artist(@artist_2)
     @curator.add_artist(@artist_3)
@@ -162,7 +154,6 @@ skip
     @curator.add_photograph(@photo_2)
     @curator.add_photograph(@photo_3)
     @curator.add_photograph(@photo_4)
-
     expected  = []
     actual = @curator.artists_with_multiple_photographs
     assert_equal expected, actual
@@ -171,9 +162,9 @@ skip
     actual = @curator.artists_with_multiple_photographs
     assert_equal expected, actual
 
-    # expected =
-    # actual = @curator.artists_with_multiple_photographs
-    # assert_equal expected, actual
+    expected =
+    actual = @curator.artists_with_multiple_photographs
+    assert_equal expected, actual
   end
 
   def test_it_can_find_photographs_by_artist_from_country
